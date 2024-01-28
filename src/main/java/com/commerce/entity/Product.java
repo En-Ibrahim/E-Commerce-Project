@@ -47,7 +47,7 @@ public class Product {
     }
 
     public void incrementCounter() {
-        setCounter(getCounter()+1);
+        setCounter(++counter);
     }
 
     @Override

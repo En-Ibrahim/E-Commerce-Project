@@ -70,6 +70,7 @@ public class OrderController {
 
             return new ResponseEntity<>("Deleted", HttpStatus.OK);
         } catch (Exception e) {
+
             throw new IllegalArgumentException("It's already deleted :>"+e.getMessage());
         }
 

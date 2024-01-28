@@ -106,11 +106,21 @@ public class OrderService  {
                 logger.error("Order Not Found");
                 throw new IllegalArgumentException("Order Not Found");
             }
-            List<Product> products = this.productRepo.findAllByOrdersOrderId(order.get().getOrderId());
-            products.forEach(Product::incrementCounter);
-            order.get().getUser().incrementBalance(order.get().getTotalPrice());
+
+            List<Product> products = order.get().getProducts();
+            for (Product p:products) {
+                p.incrementCounter();
+                logger.info("counter "+p.getCounter());
+//                productRepo.save(p);
+            }
+
             orderRepo.deleteById(id);
 
+            productRepo.saveAll(products);
+
+            User user= order.get().getUser();
+            user.incrementBalance(order.get().getTotalPrice());
+            userRepo.save(user);
             String subject= "E-Commerce";
             String message="You canceled your order and paid "+order.get().getTotalPrice()+
                     " back you again \nand your balance now is : "+order.get().getUser().getBalance();
