@@ -1,40 +1,30 @@
 {
 	"info": {
-		"_postman_id": "5311f11a-6968-4162-b5fb-050da1828558",
+		"_postman_id": "db4e0ea1-d1a6-4d0f-91b3-0fa3d9030561",
 		"name": "E-Commerce Project",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "25618794",
-		"_collection_link": "https://speeding-spaceship-997041.postman.co/workspace/a989dc22-6d6f-4d8f-8934-7d2d3e1c96c1/collection/25618794-5311f11a-6968-4162-b5fb-050da1828558?action=share&source=collection_link&creator=25618794"
+		"_collection_link": "https://speeding-spaceship-997041.postman.co/workspace/a989dc22-6d6f-4d8f-8934-7d2d3e1c96c1/collection/25618794-db4e0ea1-d1a6-4d0f-91b3-0fa3d9030561?action=share&source=collection_link&creator=25618794"
 	},
 	"item": [
 		{
 			"name": "user",
 			"item": [
 				{
-					"name": "add",
+					"name": "add user",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n    \"name\": \"Noura\",\r\n    \"email\": \"nourahalsha3er@gmail.com\",\r\n    \"balance\": 500000.0,\r\n    \"password\": \"123456789\"\r\n}",
+							"raw": "{\r\n    \r\n    \"name\": \"Ibrahim\",\r\n    \"email\": \"${enter here email}\",\r\n    \"balance\": 500000.0,\r\n    \"password\": \"123456789\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8080/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user"
-							]
-						}
+						"url": "http://localhost:8080/user"
 					},
 					"response": []
 				},
@@ -128,17 +118,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8080/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user"
-							]
-						}
+						"url": "http://localhost:8080/user"
 					},
 					"response": []
 				},
@@ -160,7 +140,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/user/?email=ibrahim@gmail.com",
+							"raw": "http://localhost:8080/user/email?email=",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -168,12 +148,12 @@
 							"port": "8080",
 							"path": [
 								"user",
-								""
+								"email"
 							],
 							"query": [
 								{
 									"key": "email",
-									"value": "ibrahim@gmail.com"
+									"value": ""
 								}
 							]
 						}
@@ -186,7 +166,7 @@
 			"name": "Order",
 			"item": [
 				{
-					"name": "add Test",
+					"name": "add order",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -198,7 +178,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"location\": \"Eldokki\",\r\n    \"userEmail\": \"nourahalsha3er@gmail.com\",\r\n    \"products\": [\r\n       7,2,4\r\n    ]\r\n}",
+							"raw": "{\r\n    \"location\": \"Eldokki\",\r\n    \"userEmail\": \"${Enter here email}\",\r\n    \"products\": [\r\n       7,2,4\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -206,7 +186,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/order?email=emadshraf@gmail.com",
+							"raw": "http://localhost:8080/order",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -217,12 +197,13 @@
 							],
 							"query": [
 								{
-									"key": "email",
-									"value": "emadshraf@gmail.com"
+									"key": "",
+									"value": "",
+									"disabled": true
 								},
 								{
-									"key": "prods",
-									"value": "{1,2}",
+									"key": "",
+									"value": "",
 									"disabled": true
 								}
 							]
@@ -243,37 +224,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"location\": \"Eldokki\",\r\n        \"userEmail\": \"nourahalsha3er@gmail.com\",\r\n        \"products\": [\r\n            1,\r\n            2,\r\n            3\r\n        ]\r\n    },\r\n    {\r\n        \"location\": \"Eldokki\",\r\n        \"userEmail\": \"salmaosama20001@gmail.com\",\r\n        \"products\": [\r\n            1,\r\n            2,\r\n            3\r\n        ]\r\n    }\r\n]",
+							"raw": "[\r\n    {\r\n        \"location\": \"Eldokki\",\r\n        \"userEmail\": \"${Enter here email}\",\r\n        \"products\": [\r\n            1,\r\n            2,\r\n            3\r\n        ]\r\n    },\r\n    {\r\n        \"location\": \"Eldokki\",\r\n        \"userEmail\": \"${Enter here email}\",\r\n        \"products\": [\r\n            1,\r\n            2,\r\n            3\r\n        ]\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8080/order/orders",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"order",
-								"orders"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "ibrahim@gmail.com",
-									"disabled": true
-								},
-								{
-									"key": "prods",
-									"value": "{1,2}",
-									"disabled": true
-								}
-							]
-						}
+						"url": "http://localhost:8080/order/orders"
 					},
 					"response": []
 				},
@@ -368,7 +326,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/order/customer?email=ibrahim@gmail.com",
+							"raw": "http://localhost:8080/order/user?email=",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -376,12 +334,12 @@
 							"port": "8080",
 							"path": [
 								"order",
-								"customer"
+								"user"
 							],
 							"query": [
 								{
 									"key": "email",
-									"value": "ibrahim@gmail.com"
+									"value": ""
 								}
 							]
 						}
@@ -407,17 +365,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8080/product",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"product"
-							]
-						}
+						"url": "http://localhost:8080/product"
 					},
 					"response": []
 				},
@@ -438,17 +386,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8080/product",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"product"
-							]
-						}
+						"url": "http://localhost:8080/product"
 					},
 					"response": []
 				},
