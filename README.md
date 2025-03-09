@@ -1,21 +1,15 @@
 # E-commerce application 
-this application make get orders became easily  , send mail or message to user when any action he do ( create account , order, place order, cancel order )
-can also admin add items for his market and recive message 
- tell him the item added successfully or not  
 
- ## Technologies used
- #### Spring boot
- #### spring MVC pattern
- #### spring data
- #### Restfull api
- #### Mysql database
- #### Maven 
- #### validation 
- #### Sender mail 
- #### logger log4j
+This application simplifies the order management process, allowing users to place, track, and cancel orders efficiently. It also features an automated email and SMS notification system, informing users of key actions such as account creation, order placement, and order cancellation.
 
+Additionally, administrators can add new products to the marketplace, receiving real-time feedback on whether the item was successfully added.
 
- ## APIs
+## Technologies Used:
+#### Backend: Spring Boot, Spring MVC, Spring Data, RESTful API
+#### Database: MySQL
+#### Build & Tools: Maven, Log4j for logging
+#### Features: Input validation, email notifications (Spring Mail)
+
  you go to posman and export file "E-Commerce Project.postman_collection.json" 
  , you will get all api headers 
 
