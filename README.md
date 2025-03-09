@@ -5,10 +5,14 @@ This application simplifies the order management process, allowing users to plac
 Additionally, administrators can add new products to the marketplace, receiving real-time feedback on whether the item was successfully added.
 
 ## Technologies Used:
-#### Backend: Spring Boot, Spring MVC, Spring Data, RESTful API
-#### Database: MySQL
-#### Build & Tools: Maven, Log4j for logging
-#### Features: Input validation, email notifications (Spring Mail)
+#### Backend:
+    Spring Boot, Spring MVC, Spring Data, RESTful API
+#### Database: 
+    MySQL
+#### Build & Tools:
+    Maven, Log4j for logging
+#### Features:
+    Input validation, email notifications (Spring Mail)
 
  you go to posman and export file "E-Commerce Project.postman_collection.json" 
  , you will get all api headers 
